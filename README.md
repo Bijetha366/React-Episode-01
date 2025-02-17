@@ -1,3 +1,63 @@
+In vs code if you write "html:5" and hit enter it will give you a basic html skeleton ( with head , title , body)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World!</h1>
+    </div>
+</body>
+</html>
+
+create same hello world program by using java script:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const heading=document.createElement("h1");
+        heading.textContent="Hello World from Javascript!";
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script>
+</body>
+</html>
+Browser have javascript engine it so that excite this javascript code. but does the browser understands what is react ?
+Ans : No
+
+Write the basic hello world program with react:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>  core of react
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> this is the react library which is useful for dom operations ( this is the react dom which is useful for modify the dom)
+    <script>
+        const heading=React.createElement("h1",{id:"h1"},"Hello World from react!");
+        const root=ReactDom.createRoot(document.getElementById("root"));
+        root.render(heading);
+    </script>
+</body>
+</html>
+
+
 *React is an open library (library bcoz it can run independently in a small portion of your app) it will not enforce for an particular project structure.
 
 CDN : Content delivery networks is a system of distributed netweorks which work together to deliver web content ( images , videos , js and css files) to the end user in their local geographical system.
